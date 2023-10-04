@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo</title>
+    <link rel="icon" type="image/.png" sizes="16x16"  href="./images/favicon.png">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <div class="container-fluid">
+        <h1>Cadastro de Clientes</h1>
+    </div>
+    <div class="container">
+        <button id="addClientes" onclick="openModal()">Cadastrar Cliente</button>
+        <div class="cad hide">
+            <ul class="titleCad">
+                <li>Nome</li>
+                <li>E-mail</li>
+                <li>Celular</li>
+                <li>Cidade</li>
+                <li>Ação</li>
+            </ul>
+                     
+        </div>
+    </div>
+    
+    <div class="container-modal hide">
+        <h2>Novo Cliente</h2>
+        <form id="formId">
+            <div class="fiels-camp">
+                <div class="field-group">                    
+                    <input type="text" name="nome" data-index="new" class="input-fields" id="nome" placeholder="Nome do cliente" required>
+                </div>
+                <div class="field-group">                    
+                    <input type="text" name="email" data-index="new" class="input-fields" id="email" placeholder="E-mail do cliente" required>
+                </div>
+                <div class="field-group">                   
+                    <input type="text" name="celular" data-index="new" class="input-fields" id="celular" placeholder="Celular do cliente" required>
+                </div>
+                <div class="field-group">                    
+                    <input type="text" name="cidade" data-index="new" class="input-fields" id="cidade" placeholder="Cidade do cliente" required>
+                </div>
+            </div>
+            <div class="field-group-btns">
+                <button class="btn btn-salvar" id="salvar">Salvar</button>
+                <button class="btn btn-cancelar" onclick="closeModal()">Cancelar</button>
+            </div>
+        </form>
+        <span class="close" onclick="closeModal()">x</span>
+    </div>
+
+    <!--TEMPLATE CLONE-->
+    
+
+    <div class="modal hide"></div> 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
